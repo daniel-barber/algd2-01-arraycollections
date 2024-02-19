@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd2.arraycollections.UnsortedBagTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-02-19T09:52:40" hostname="DESKTOP-CR4IAKN" time="0.01">
+  <properties/>
+  <testcase name="addMoreThanCapacity" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.01">
+    <failure message="java.lang.Exception: Unexpected exception, expected&lt;java.lang.IllegalStateException&gt; but was&lt;java.lang.UnsupportedOperationException&gt;" type="java.lang.Exception">java.lang.Exception: Unexpected exception, expected&lt;java.lang.IllegalStateException&gt; but was&lt;java.lang.UnsupportedOperationException&gt;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:30)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.UnsupportedOperationException
+	at ch.fhnw.algd2.arraycollections.UnsortedBag.add(UnsortedBag.java:31)
+	at ch.fhnw.algd2.arraycollections.general.AbstractCollectionTest.addMoreThanCapacity(AbstractCollectionTest.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	... 5 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

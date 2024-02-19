@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd2.arraycollections.UnsortedBagTest" tests="19" skipped="0" failures="3" errors="0" timestamp="2024-02-19T09:59:25" hostname="DESKTOP-CR4IAKN" time="0.186">
+  <properties/>
+  <testcase name="testLinearSearch" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.006"/>
+  <testcase name="removesOnlyOneInstance" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.004">
+    <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at ch.fhnw.algd2.arraycollections.general.AbstractBagTest.removesOnlyOneInstance(AbstractBagTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</failure>
+  </testcase>
+  <testcase name="containsNull" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="removeLastElement" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="removeNonExisting" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addNumberSequence" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.002"/>
+  <testcase name="addDuplicates" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="containsLastElement" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addNull" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="removeHasNoMemoryLeak" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.162"/>
+  <testcase name="addUnsortedNumberSequence" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="testEmptyCollection" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="notExistingElementInFullCollection" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001">
+    <failure message="java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at ch.fhnw.algd2.arraycollections.UnsortedBag.indexOf(UnsortedBag.java:63)
+	at ch.fhnw.algd2.arraycollections.UnsortedBag.contains(UnsortedBag.java:57)
+	at ch.fhnw.algd2.arraycollections.general.AbstractCollectionTest.notExistingElementInFullCollection(AbstractCollectionTest.java:91)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</failure>
+  </testcase>
+  <testcase name="removeElement" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="removeElementFromFullList" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addMoreThanCapacity" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="containsWithEquals" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001">
+    <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at ch.fhnw.algd2.arraycollections.general.AbstractCollectionTest.containsWithEquals(AbstractCollectionTest.java:162)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</failure>
+  </testcase>
+  <testcase name="addSingleNull" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.001"/>
+  <testcase name="containsOtherObject" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
