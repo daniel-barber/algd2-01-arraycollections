@@ -25,7 +25,7 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
 
     @Override
     public boolean add(E e) {
-        // TODO implement unless collection shall be immutable
+        // done implement unless collection shall be immutable
         checkNull(e);
         if(size==data.length){
             throw new IllegalStateException();
@@ -37,7 +37,7 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
 
     @Override
     public boolean remove(Object o) {
-        // TODO implement unless collection shall be immutable
+        // done implement unless collection shall be immutable
         checkNull(o);
         int index = indexOf(o);
         if (index == -1){
@@ -52,7 +52,7 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
 
     @Override
     public boolean contains(Object o) {
-        // TODO must be implemented
+        // done must be implemented
         checkNull(o);
         return indexOf(o) != -1;
         //throw new UnsupportedOperationException();
@@ -77,7 +77,7 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
 
     @Override
     public int size() {
-        // TODO must be implemented
+        // done must be implemented
         return size;
     }
 }

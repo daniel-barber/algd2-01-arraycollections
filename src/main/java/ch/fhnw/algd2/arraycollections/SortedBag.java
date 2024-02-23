@@ -47,13 +47,31 @@ public class SortedBag<E extends Comparable<? super E>> extends AbstractArrayCol
 
     @Override
     public boolean remove(Object o) {
-        // TODO implement unless collection shall be immutable
-        throw new UnsupportedOperationException();
-    }
+        checkNull(o);
+        int removeIndex = indexOf(o);
+        if (removeIndex == -1) {
+            return false;
+        }
+        if (removeIndex == size - 1) {
+            data[removeIndex] = null;
+            size--;
+            return true;
+        }
+
+            for (int i = removeIndex; i < size-1; i++) {
+                data[i] = data[i+1];
+            }
+            data[size-1] = null;
+            size--;
+            return true;
+        }
+        // done implement unless collection shall be immutable
+        //throw new UnsupportedOperationException();
+
 
     @Override
     public boolean contains(Object o) {
-        // TODO must be implemented
+        // done must be implemented
         checkNull(o);
         return indexOf(o) != -1;
         //throw new UnsupportedOperationException();
