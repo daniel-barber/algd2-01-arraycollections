@@ -30,7 +30,7 @@ public class UnsortedSet<E> extends AbstractArrayCollection<E> implements Set<E>
         // done implement unless collection shall be immutable
         checkNull(e);
         if (!contains(e)) {
-            if(size== data.length){
+            if (size == data.length) {
                 throw new IllegalStateException();
             }
             data[size++] = e;
@@ -44,12 +44,12 @@ public class UnsortedSet<E> extends AbstractArrayCollection<E> implements Set<E>
     public boolean remove(Object o) {
         // done implement unless collection shall be immutable
         checkNull(o);
-        if(!contains(o)){
+        if (!contains(o)) {
             return false;
         }
         int removeIndex = indexOf(o);
-        data[removeIndex]=data[size-1];
-        data[size-1]=null;
+        data[removeIndex] = data[size - 1];
+        data[size - 1] = null;
         size--;
         return true;
         //throw new UnsupportedOperationException();
@@ -68,7 +68,7 @@ public class UnsortedSet<E> extends AbstractArrayCollection<E> implements Set<E>
         while (i < size && !data[i].equals(o)) {
             i++;
         }
-        if (i == size){
+        if (i == size) {
             return -1;
         }
         return i;

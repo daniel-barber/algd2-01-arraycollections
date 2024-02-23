@@ -76,7 +76,7 @@ public class SortedSet<E extends Comparable<? super E>> extends AbstractArrayCol
         //throw new UnsupportedOperationException();
     }
 
-    private int indexOf(Object o) {
+    private int indexOfLinear(Object o) {
         int i = 0;
         while (i < size && !data[i].equals(o)) {
             i++;
@@ -85,6 +85,24 @@ public class SortedSet<E extends Comparable<? super E>> extends AbstractArrayCol
             return -1;
         }
         return i;
+    }
+
+
+    //Binary Implementation with Wildcard with upper bound
+    private int indexOf(Object o) {
+        int l = -1, h = size;
+        while (l + 1 != h) {
+            int m = l + h >>> 1;
+            if (((Comparable<? super E>) data[m]).compareTo((E) o) < 0) {
+                l = m;
+            } else {
+                h = m;
+            }
+        }
+        if (h == size || !data[h].equals(o)) {
+            return -1;
+        }
+        return h;
     }
 
     @Override
