@@ -27,7 +27,7 @@ public class SortedSet<E extends Comparable<? super E>> extends AbstractArrayCol
 
     @Override
     public boolean add(E e) {
-        // TODO implement unless collection shall be immutable
+        // done implement unless collection shall be immutable
         checkNull(e);
         if(contains(e)){return false;}
         if (size == data.length) {
@@ -54,7 +54,18 @@ public class SortedSet<E extends Comparable<? super E>> extends AbstractArrayCol
     @Override
     public boolean remove(Object o) {
         // TODO implement unless collection shall be immutable
-        throw new UnsupportedOperationException();
+        checkNull(o);
+        if(!contains(o)){
+            return false;
+        }
+        int removeIndex = indexOf(o);
+        for(int i=removeIndex;i<size-1;i++){
+            data[i]=data[i+1];
+        }
+        data[size-1]=null;
+        size--;
+        return true;
+        //throw new UnsupportedOperationException();
     }
 
     @Override
