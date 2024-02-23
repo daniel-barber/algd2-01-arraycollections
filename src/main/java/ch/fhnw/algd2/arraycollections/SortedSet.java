@@ -53,7 +53,7 @@ public class SortedSet<E extends Comparable<? super E>> extends AbstractArrayCol
 
     @Override
     public boolean remove(Object o) {
-        // TODO implement unless collection shall be immutable
+        // done implement unless collection shall be immutable
         checkNull(o);
         if(!contains(o)){
             return false;
