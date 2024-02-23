@@ -60,7 +60,7 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
 
     private int indexOf(Object o) {
         int current = 0;
-        while (data[current] != o && current < size) {
+        while (current < size && data[current] != o ) {
             current++;
         }
         if (current == size) {
