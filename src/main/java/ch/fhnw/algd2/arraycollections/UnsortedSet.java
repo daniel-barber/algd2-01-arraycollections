@@ -27,7 +27,7 @@ public class UnsortedSet<E> extends AbstractArrayCollection<E> implements Set<E>
 
     @Override
     public boolean add(E e) {
-        // TODO implement unless collection shall be immutable
+        // done implement unless collection shall be immutable
         checkNull(e);
         if (!contains(e)) {
             if(size== data.length){
@@ -43,12 +43,21 @@ public class UnsortedSet<E> extends AbstractArrayCollection<E> implements Set<E>
     @Override
     public boolean remove(Object o) {
         // TODO implement unless collection shall be immutable
-        throw new UnsupportedOperationException();
+        checkNull(o);
+        if(!contains(o)){
+            return false;
+        }
+        int removeIndex = indexOf(o);
+        data[removeIndex]=data[size-1];
+        data[size-1]=null;
+        size--;
+        return true;
+        //throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean contains(Object o) {
-        // TODO must be implemented
+        // done must be implemented
         checkNull(o);
         return indexOf(o) != -1;
         //throw new UnsupportedOperationException();
