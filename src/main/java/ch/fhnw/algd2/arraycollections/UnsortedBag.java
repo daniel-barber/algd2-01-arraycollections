@@ -27,12 +27,19 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
     public boolean add(E e) {
         // done implement unless collection shall be immutable
         checkNull(e);
-        if(size==data.length){
-            throw new IllegalStateException();
-        }
-        data[size++] = e;
+        checkRemainingCapacity();
+        addElement(e);
         return true;
-        //throw new UnsupportedOperationException();
+    }
+
+    private void addElement(E e) {
+        data[size++] = e;
+    }
+
+    private void checkRemainingCapacity() {
+        if (size == data.length) {
+            throw new IllegalStateException("Array full.");
+        }
     }
 
     @Override
@@ -40,14 +47,14 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
         // done implement unless collection shall be immutable
         checkNull(o);
         int index = indexOf(o);
-        if (index == -1){
+        if (index == -1) {
             return false;
         }
-        data[index] = data[size-1];
-        data[size-1] = null;
+        data[index] = data[size - 1];
+        //remove last Element (avoid memory leak)
+        data[size - 1] = null;
         size--;
         return true;
-        //throw new UnsupportedOperationException();
     }
 
     @Override
@@ -55,7 +62,6 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
         // done must be implemented
         checkNull(o);
         return indexOf(o) != -1;
-        //throw new UnsupportedOperationException();
     }
 
     private int indexOf(Object o) {

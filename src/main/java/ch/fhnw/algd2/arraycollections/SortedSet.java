@@ -29,40 +29,44 @@ public class SortedSet<E extends Comparable<? super E>> extends AbstractArrayCol
     public boolean add(E e) {
         // done implement unless collection shall be immutable
         checkNull(e);
-        if(contains(e)){return false;}
+        if (contains(e)) {
+            return false;
+        }
         if (size == data.length) {
             throw new IllegalStateException();
         }
-            int insertIndex = 0;
-            //find insertIndex
-            while (insertIndex < size && data[insertIndex].compareTo(e) < 0) {
-                insertIndex++;
-            }
-            //shift everything right
-            for (int i = size; i > insertIndex; i--) {
-                data[i] = data[i - 1];
-            }
-            //insert e
-            data[insertIndex] = e;
-            size++;
-            return true;
-        }
+        int insertIndex = 0;
 
-        //throw new UnsupportedOperationException();
+        //find insertIndex
+        while (insertIndex < size && data[insertIndex].compareTo(e) < 0) {
+            insertIndex++;
+        }
+        //shift everything right
+        for (int i = size; i > insertIndex; i--) {
+            data[i] = data[i - 1];
+        }
+        //insert e
+        data[insertIndex] = e;
+        size++;
+        return true;
+    }
+
+    //throw new UnsupportedOperationException();
 
 
     @Override
     public boolean remove(Object o) {
         // done implement unless collection shall be immutable
         checkNull(o);
-        if(!contains(o)){
+        if (!contains(o)) {
             return false;
         }
+        // move elements left -> avoid memory leak
         int removeIndex = indexOf(o);
-        for(int i=removeIndex;i<size-1;i++){
-            data[i]=data[i+1];
+        for (int i = removeIndex; i < size - 1; i++) {
+            data[i] = data[i + 1];
         }
-        data[size-1]=null;
+        data[size - 1] = null;
         size--;
         return true;
         //throw new UnsupportedOperationException();
@@ -103,6 +107,11 @@ public class SortedSet<E extends Comparable<? super E>> extends AbstractArrayCol
             return -1;
         }
         return h;
+    }
+
+    private int indexOfBinSearchMethod(Object o) {
+        // returns position of element >=0 or (-(insertion point) - 1)
+        return Arrays.binarySearch(data, 0, size, o);
     }
 
     @Override
