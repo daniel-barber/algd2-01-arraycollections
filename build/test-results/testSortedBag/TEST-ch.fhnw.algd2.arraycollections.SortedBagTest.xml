@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd2.arraycollections.SortedBagTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-02-23T23:00:54" hostname="DESKTOP-CR4IAKN" time="1.162">
+  <properties/>
+  <testcase name="containsWithEquals" classname="ch.fhnw.algd2.arraycollections.SortedBagTest" time="1.162">
+    <failure message="org.junit.runners.model.TestTimedOutException: test timed out after 1000 milliseconds" type="org.junit.runners.model.TestTimedOutException">org.junit.runners.model.TestTimedOutException: test timed out after 1000 milliseconds
+	at ch.fhnw.algd2.arraycollections.general.Elem.&lt;init&gt;(Elem.java:12)
+	at ch.fhnw.algd2.arraycollections.general.AbstractCollectionTest.containsWithEquals(AbstractCollectionTest.java:162)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

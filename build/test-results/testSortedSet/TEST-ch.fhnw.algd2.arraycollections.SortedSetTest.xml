@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd2.arraycollections.SortedSetTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-23T22:21:50" hostname="DESKTOP-CR4IAKN" time="0.012">
+  <properties/>
+  <testcase name="addExistingElementToFullSet" classname="ch.fhnw.algd2.arraycollections.SortedSetTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

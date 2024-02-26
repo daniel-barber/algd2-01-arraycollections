@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd2.arraycollections.UnsortedSetTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-23T21:44:14" hostname="DESKTOP-CR4IAKN" time="0.007">
+  <properties/>
+  <testcase name="addNumberSequence" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
